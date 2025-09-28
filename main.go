@@ -1,5 +1,13 @@
 package main
-import "fmt"
+import (
+	"fmt"
+	"os"
+
+	cmd "passwordManager/cmd"
+)
 func main(){
-	fmt.Println("heelo")
+	if err := cmd.Execute(); err != nil{
+		fmt.Println(err)
+		os.Exit(1)
+	}
 }
