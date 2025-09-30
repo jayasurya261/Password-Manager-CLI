@@ -1,45 +1,49 @@
-# Password Manager
+# 🔐 Password Manager CLI
 
-A simple and secure password manager built with Go.
+A simple and secure command-line password manager written in **Go**.  
+It allows you to store, retrieve, and manage credentials locally in an encrypted SQLite database.
 
-## Features
+---
 
-- Store and manage passwords securely
-- Encrypts sensitive data
-- Command-line interface for easy usage
-- Cross-platform support
+## ✨ Features
+- ✅ Add, list, and delete credentials securely  
+- ✅ Master password protection  
+- ✅ Encrypted password storage  
+- ✅ Simple CLI commands using Cobra  
+- ✅ Cross-platform (builds into a single binary)  
 
-## Getting Started
+---
+
+## 📦 Installation
 
 ### Prerequisites
+- Go **1.23+** (recommended `1.25`)  
+- Git  
 
-- Go 1.18 or higher
-
-### Installation
-
+### Clone & Build
 ```bash
-git clone https://github.com/jayasurya261/Password-Manager-CLI.git
-cd Password-Manager-CLI
-go build
-```
+git clone https://github.com/yourusername/password-manager-cli.git
+cd password-manager-cli
+go build -o pwm .
+./pwm --help
 
-### Usage
-
+### Add a new credential
 ```bash
-./PasswordManager [command] [options]
-```
+pwm add -s github -u myusername -p mypassword
 
-Example:
-
+### List all credentials
 ```bash
-./PasswordManager add
-./PasswordManager list
-```
+pwm list
+### Delete a credential
+```bash
+pwm delete [ID]
 
-## Contributing
-
-Contributions are welcome! Please open issues or submit pull requests.
-
-## License
-
-This project is licensed under the MIT License.
+.
+├── cmd/           # CLI commands (Cobra)
+├── internal/
+│   ├── crypto/      # Encryption & decryption
+│   ├── db/          # Database logic (SQLite)
+│   └── config/      # App configuration
+├── go.mod
+├── go.sum
+└── main.go
