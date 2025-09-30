@@ -26,18 +26,23 @@ git clone https://github.com/yourusername/password-manager-cli.git
 cd password-manager-cli
 go build -o pwm .
 ./pwm --help
+```
 
 ### Add a new credential
 ```bash
 pwm add -s github -u myusername -p mypassword
+```
 
 ### List all credentials
 ```bash
 pwm list
+```
 ### Delete a credential
 ```bash
 pwm delete [ID]
-
+```
+### Folder Structure
+```bash
 .
 ├── cmd/           # CLI commands (Cobra)
 ├── internal/
@@ -47,3 +52,4 @@ pwm delete [ID]
 ├── go.mod
 ├── go.sum
 └── main.go
+```
