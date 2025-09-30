@@ -18,7 +18,7 @@ fmt.Println("Welcome to PWM - Your Password Manager CLI")
 func Execute() error{
 	err:=db.InitDB("passwords.db")
 	if err != nil{
-		log.Fatal("database initialization failed: %v",err)
+		log.Fatalf("database initialization failed: %v",err)
 
 	}
 return rootCmd.Execute()
