@@ -1,4 +1,6 @@
 # 🔐 Password Manager CLI
+![Go Build](https://github.com/jayasurya261/Password-Manager-CLI/actions/workflows/go.yml/badge.svg)
+
 
 A simple and secure command-line password manager written in **Go**.  
 It allows you to store, retrieve, and manage credentials locally in an encrypted SQLite database.
